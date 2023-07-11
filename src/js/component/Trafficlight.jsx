@@ -10,11 +10,21 @@ export const Trafficlight = () => {
         animation:"glow 0.8s linear infinite alternate",        
     }    
     
+    const theRedClick = () => {
+        setLight("red")
+    }
+    const theYellowClick = () => {
+        setLight("yellow")
+    }
+    const theGreenClick = () => {
+        setLight("green")
+    }
+
     return (
         <div className="box">            
-            <div className= "redlight" onClick={() => setLight("red")} style={light == "red" ? myStyle : null}></div>
-            <div className="redyellow" onClick={() => setLight("yellow")} style={light == "yellow" ? myStyle : null}></div>
-            <div className="redgreen" onClick={() => setLight("green")} style={light == "green" ? myStyle : null}></div>
+            <div className= "redlight" onClick={theRedClick} style={light == "red" ? myStyle : null}></div>
+            <div className="redyellow" onClick={theYellowClick} style={light == "yellow" ? myStyle : null}></div>
+            <div className="redgreen" onClick={theGreenClick} style={light == "green" ? myStyle : null}></div>
         </div>
     )
 }
